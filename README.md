@@ -7,7 +7,7 @@ Essa é uma documentação simplificada para a API de gerenciamento de filas, é
 
 **Url da API**: https://queue-management.pedagogico.cubos.academy/
 
-## POST `/login/seuemail@email.com`
+## POST `/login?userEmail=seuemail@email.com`
 
 Essa é uma rota que serve para um administrador se autenticar.
 
@@ -33,11 +33,9 @@ A senha deve ser sempre a mesma: **abc123**
 ```
 
 --- 
-## GET `/products/seuemail@email.com`
+## GET `/products`
 
 Essa rota devolve os produtos cadastrados no banco de dados.
-
-É **importante** ressaltar que *seuemail@email.com* é onde você deve inserir o seu e-mail de uso pessoal, para que você possa ter identificação única no sistema.
 
 
 #### Retorno da Requisição:
@@ -73,11 +71,11 @@ Essa rota devolve os produtos cadastrados no banco de dados.
 
 ---
 
-## POST `/orders/seuemail@email.com`
+## POST `/orders`
 
-Essa rota permite que você adicione um novo pedido no sistema
+Essa rota permite que você adicione um novo pedido no sistema.
 
-É **importante** ressaltar que *seuemail@email.com* é onde você deve inserir o seu e-mail de uso pessoal, para que você possa ter identificação única no sistema.
+Essa é uma rota autenticada.
 
 
 #### Body da Requisição:
@@ -87,6 +85,14 @@ Essa rota permite que você adicione um novo pedido no sistema
  "client_name": "João Pedro"
 }
 ```
+
+#### Headers da Requisição:
+```json 
+{
+ "Authorization":"Bearer  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InBlZHJvQGdtYWlsLmNvbSIsImlhdCI6MTY3NDE1MDcxOCwiZXhwIjoxNjc0MjM3MTE4fQ.MbIXE4qPHtXpszzBv4Eis3QXOkTqKCo0D-6WJliNOHc"
+}
+```
+
 
 #### Retorno da requisição: 
 
@@ -107,7 +113,7 @@ Essa rota permite que você adicione um novo pedido no sistema
 ```
 ---
 
-## GET `/orders/seuemail@email.com`
+## GET `/orders?userEmail=seuemail@email.com`
 
 Essa rota devolve os produtos cadastrados no banco de dados.
 
@@ -136,11 +142,12 @@ Essa rota devolve os produtos cadastrados no banco de dados.
 
 ---
 
-## PUT `/orders/:order_id/seuemail@email.com`
+## PUT `/orders/:order_id`
 
-Essa rota permite que você adicione um novo pedido no sistema
+Essa rota permite que você adicione um novo pedido no sistema.
 
-É **importante** ressaltar que *seuemail@email.com* é onde você deve inserir o seu e-mail de uso pessoal, para que você possa ter identificação única no sistema.
+Essa é uma rota autenticada.
+
 
 **order_id** = Id da order criada no post de orders
 
@@ -149,6 +156,13 @@ Essa rota permite que você adicione um novo pedido no sistema
 ```json 
 {
     "status":"finish"
+}
+```
+
+#### Headers da Requisição:
+```json 
+{
+ "Authorization":"Bearer  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InBlZHJvQGdtYWlsLmNvbSIsImlhdCI6MTY3NDE1MDcxOCwiZXhwIjoxNjc0MjM3MTE4fQ.MbIXE4qPHtXpszzBv4Eis3QXOkTqKCo0D-6WJliNOHc"
 }
 ```
 
