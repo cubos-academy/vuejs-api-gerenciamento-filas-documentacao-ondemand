@@ -75,8 +75,6 @@ Essa rota devolve os produtos cadastrados no banco de dados.
 
 Essa rota permite que você adicione um novo pedido no sistema.
 
-Essa é uma rota autenticada.
-
 
 #### Body da Requisição:
 ```json 
@@ -85,14 +83,6 @@ Essa é uma rota autenticada.
  "client_name": "João Pedro"
 }
 ```
-
-#### Headers da Requisição:
-```json 
-{
- "Authorization":"Bearer  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InBlZHJvQGdtYWlsLmNvbSIsImlhdCI6MTY3NDE1MDcxOCwiZXhwIjoxNjc0MjM3MTE4fQ.MbIXE4qPHtXpszzBv4Eis3QXOkTqKCo0D-6WJliNOHc"
-}
-```
-
 
 #### Retorno da requisição: 
 
