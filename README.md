@@ -151,7 +151,7 @@ Essa é uma rota autenticada.
 #### Body da Requisição:
 ```json 
 {
-    "status":"finish"
+    "status":"waiting"
 }
 ```
 
@@ -171,7 +171,7 @@ Essa é uma rota autenticada.
   "updatedAt": "2023-01-19T17:52:36.969Z",
   "product_id": "0e46e76a-4401-4fd6-bbac-756674a16e9d",
   "number": "5",
-  "status": "finish",
+  "status": "waiting",
   "client_name": "João Pedro",
   "admin_email": "pedro@gmail.com",
   "name": "X-Tudo",
