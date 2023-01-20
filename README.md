@@ -188,3 +188,8 @@ Essa api também dispõe de duas conexões com socket, para que as atualizaçõe
     - Para isso ouviremos o emit em `orders-update-seuemail@email.com`
 - Quando criamos um pedido
     - Para isso ouviremos o emit em `orders-seuemail@email.com`
+    
+#### Importante!
+Ao observar o orders-update-seuemail@email.com e ordes-seuemail@email.com, o parâmetro de retorno é a order em questão, seja ela atualizada o nova inserida.
+
+
