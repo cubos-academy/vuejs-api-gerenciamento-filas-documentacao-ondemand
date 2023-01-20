@@ -183,3 +183,12 @@ Essa é uma rota autenticada.
   "price": 28.5
 }
 ```
+
+# WebSocket
+
+Essa api também dispõe de duas conexões com socket, para que as atualizações sejam fluidas no frontend. Essas conexões são:
+
+- Quando atualizamos um pedido
+    - Para isso ouviremos o emit em `orders-update-seuemail@email.com`
+- Quando criamos um pedido
+    - Para isso ouviremos o emit em `orders-seuemail@email.com`
