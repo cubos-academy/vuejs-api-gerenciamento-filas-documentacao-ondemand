@@ -110,6 +110,11 @@ Essa rota devolve os produtos cadastrados no banco de dados.
 
 É **importante** ressaltar que *seuemail@email.com* é onde você deve inserir o seu e-mail de uso pessoal, para que você possa ter identificação única no sistema.
 
+Toda order tem 3 estados:
+1. in production (Quando o pedido foi feito, mas ainda não está pronto)
+2. waiting (Quando o produto já está pronto e o cliente pode ir retirar)
+3. done (Quando o produto já foi entregue, aí ele sai da listagem)
+
 
 #### Retorno da Requisição:
 ```json 
@@ -121,7 +126,7 @@ Essa rota devolve os produtos cadastrados no banco de dados.
     "product_id": "0e46e76a-4401-4fd6-bbac-756674a16e9d",
     "number": "2",
     "status": "in production",
-    "client_name": "Camila Mancini",
+    "client_name": "Camila Marcela",
     "admin_email": "pedro@gmail.com",
     "name": "X-Tudo",
     "image": "https://embutidosbonatti.ind.br/temp/xxx-57-980x550m0.jpg",
