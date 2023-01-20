@@ -71,10 +71,11 @@ Essa rota devolve os produtos cadastrados no banco de dados.
 
 ---
 
-## POST `/orders`
+## POST `/orders?userEmail=seuemail@email.com`
 
 Essa rota permite que você adicione um novo pedido no sistema.
 
+É **importante** ressaltar que *seuemail@email.com* é onde você deve inserir o seu e-mail de uso pessoal, para que você possa ter identificação única no sistema.
 
 #### Body da Requisição:
 ```json 
